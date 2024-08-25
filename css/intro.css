@@ -1,0 +1,38 @@
+.intro-responsive{
+    width: 555px;
+    height: 130px;
+    position: absolute;
+    overflow: hidden;
+    top: 200px;
+    left: 44rem;
+}
+
+.intro-pg{
+    display:flex ;
+}
+
+
+.intro-container{
+    height: 130px;
+    width: 555px;
+}
+
+.intro{
+    height: 65px;
+    width: 555px;
+    flex-shrink: 0;
+    font-family: "Playfair Display", Georgia, serif;
+    color: black;
+    font-size: 50px;
+    -drag: none;  
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.Computer-Science{
+    color: green;
+    font-weight: bolder;
+}

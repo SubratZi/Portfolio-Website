@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;   
+}
+
+.navbar {
+    height: 60px;
+    width: 100%;
+    background-color: white;
+    color: #323232;
+    transition: 1s ease-in;
+}
+
+.nav-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.nav-an {
+    text-decoration: none;
+    color: black;
+    font-family: "Playfair Display", Georgia, serif;
+    /* font-family: "Karla", Arial, sans-serif; */
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+
+.nav-right{
+    display: flex;
+    align-items: center;
+    height: 60px;
+    width: 30%;
+    position: absolute;
+    left: 70%;
+}
+
+.nav-left{
+    display: flex;
+    align-items: center;
+    height: 60px;
+    width: 20%;
+    margin-left: 10rem;
+    position: absolute;
+    right: 70%;
+}
+
+.blog-an{
+    margin:0 10px 0 10px;
+}
+
+.categories-an{
+    margin:0 10px 0 10px;
+}
+
+.about-an{
+    margin:0 10px 0 10px;
+}
+
+hr{
+    opacity: .3;
+}
+
+.body-content{
+    height: 100%;
+    width: 100%;
+}
+
+.nav-an:hover{
+    text-decoration: underline;
+    text-decoration-color: #f30034;
+    
+}
+
+
+

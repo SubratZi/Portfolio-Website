@@ -1,0 +1,27 @@
+.image-responsive {
+    width: 458px; 
+    height: 460px;
+    position:absolute;
+    top: 150px;
+    overflow: hidden;
+    left: 120px;
+}
+
+.slide-container{
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.image {
+    width: 458px;
+    height: 460px;
+    background-size: cover;
+    flex-shrink: 0;
+    -drag: none;  
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    border-radius: 25px;
+}
