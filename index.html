@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/css/intro.css">
     <link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 <body>
@@ -32,7 +33,17 @@
                     <a class="about-an nav-an" href="#">About</a>
                 </div>
             </div>
-        
+        </div>
+
+        <div class="nav-hamburger">
+
+            <div class="nav-hamburger-bars" ontouchstart = "barclose()">
+                <i class="fa-solid fa-xmark cancel"></i>
+            </div>
+            <div class="hamburger-icon" ontouchstart = "touchbar()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            
         </div>
     </div>
     <hr>
@@ -40,8 +51,8 @@
     <div class="body-content">
         <div class="image-responsive">
             <div class="slide-container">
-                <div class="image2"><img src="/images/pic-2.jpg" alt="Avatar" class="image"></div>
-                <div class="image1"><img src="/images/pic-1.jpg" alt="Avatar" class="image"></div>
+                <div ><img src="/images/pic-2.jpg" alt="Avatar" class="image"></div>
+                <div ><img src="/images/pic-1.jpg" alt="Avatar" class="image"></div>
             </div>
         </div>
     </div>
@@ -69,5 +80,6 @@
 
     <script src="/js/imageslide.js"></script>
     <script src="/js/textslider.js"></script>
+    <script src="/js/responisvenav.js"></script>
 </body>
-</html>
+</html> 
