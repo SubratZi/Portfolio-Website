@@ -25,3 +25,17 @@
     -ms-user-select: none;
     border-radius: 25px;
 }
+
+@media only screen and (min-width: 359px) and (max-width:841px){
+    .image-responsive {
+        height: 352px;
+        width: 340px;
+        left: 0px;
+    }
+
+    .image{
+        height: 352px;
+        width: 340px;
+    }
+
+}    

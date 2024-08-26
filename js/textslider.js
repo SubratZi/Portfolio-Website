@@ -1,7 +1,6 @@
 const textslider = document.querySelector('.intro-pg');
 const texts = document.querySelectorAll('.intro-container');
 const textsWidth = 555;
-console.log(texts.length);
 let IsDragging = false;
 let StartPos = 0;
 let CurrentIndex = 0;
@@ -18,7 +17,6 @@ textslider.addEventListener('touchmove', Drag);
 function StartDrag(e) {
     IsDragging = true;
     StartPos = GetPositionX(e);
-    console.log(StartPos);
     textslider.style.cursor = "grab";
     
 }
@@ -26,7 +24,6 @@ function StartDrag(e) {
 function Drag(e) {
     if (!IsDragging) return;
     const CurrentPosition = GetPositionX(e);
-    console.log(CurrentPosition);
     const Diff = CurrentPosition - StartPos;
     
     if (Diff < 0 && CurrentIndex < texts.length - 1) {
