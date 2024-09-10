@@ -3,6 +3,11 @@
     padding: 0;   
 }
 
+body{
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 .navbar {
     height: 60px;
     width: 100%;
@@ -58,7 +63,7 @@
 }
 
 hr{
-    opacity: .3;
+    opacity: .5;
 }
 
 .body-content{
@@ -80,7 +85,7 @@ hr{
     height: 29px;
     width: 20px;
     position: absolute;
-    left: 330px;
+    right: 20px;
     top: 25px;
 }
 
@@ -97,7 +102,7 @@ hr{
     width: 220px;
     padding:64px 40px 40px 40px ;
     position: absolute;
-    left: 60px;
+    right: 0px;
     top: 0px;
     z-index: 1;
 }
@@ -115,11 +120,9 @@ hr{
 
 
 @media only screen and (min-width: 359px) and (max-width:841px){
-
     body{
         width: 360px;
     }
-
 
     .nav-hamburger{
         visibility: visible;
@@ -130,13 +133,80 @@ hr{
         
     }
 
-    .nav-left{
-        visibility: hidden;
+    .nav-left{ 
+         display: none;
     }
 
     .nav-right{
-        visibility: hidden;
-    }
+        display: none;
+    } 
 }
 
+@media only screen and (min-width: 390px) and (max-width: 400px){
+    body{
+        width: 390px;
+    }
 
+    .nav-hamburger{
+        visibility: visible;
+    }
+
+    .nav-hamburger-bars{
+        visibility: hidden;
+        
+    }
+
+    .nav-left{ 
+         display: none;
+    }
+
+    .nav-right{
+        display: none;
+    } 
+}
+
+@media only screen and (min-width: 412px) and (max-width: 500px){
+    body{
+        width: 412px;
+    }
+
+    .nav-hamburger{
+        visibility: visible;
+    }
+
+    .nav-hamburger-bars{
+        visibility: hidden;
+        
+    }
+
+    .nav-left{ 
+         display: none;
+    }
+
+    .nav-right{
+        display: none;
+    } 
+}
+
+@media only screen and (min-width: 768px) and (max-width: 841px){
+    body{
+        width: 768px;
+    }
+
+    .nav-hamburger{
+        visibility: visible;
+    }
+
+    .nav-hamburger-bars{
+        visibility: hidden;
+        
+    }
+
+    .nav-left{ 
+         display: none;
+    }
+
+    .nav-right{
+        display: none;
+    } 
+}
