@@ -13,7 +13,6 @@ body{
     width: 100%;
     background-color: white;
     color: #323232;
-    transition: 1s ease-in;
 }
 
 .nav-item{
@@ -61,6 +60,17 @@ body{
 .about-an{
     margin:0 10px 0 10px;
 }
+
+.light-mode{
+    display: flex;
+    position: absolute;
+    right: 15px;
+}
+
+.mode-an{
+    margin:0 10px 0 10px;
+}
+
 
 hr{
     opacity: .5;
