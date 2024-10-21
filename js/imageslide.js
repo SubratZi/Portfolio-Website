@@ -19,7 +19,6 @@ function startDrag(e) {
     isDragging = true;
     startPos = getPositionX(e);
     slider.style.cursor = "grab";
-    
 }
 
 function drag(e) {
@@ -47,4 +46,20 @@ function endDrag() {
 function getPositionX(e) {
     return e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
 }
+let intialposition = true;
 
+function autoslide() {
+    if (isDragging === false){
+        if (intialposition){
+            slider.style.transform = `translateX(${-imageWidth}px)`;
+            intialposition = false;
+        }
+        else{
+            slider.style.transform = "translateX(0px)";
+            intialposition = true;
+        }
+        slider.style.transition = "transform 0.9s ease";
+    }
+}
+
+setInterval(autoslide, 5000);

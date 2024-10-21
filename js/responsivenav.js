@@ -126,19 +126,4 @@ function handleScreenChange(e) {
 mediaQuery.addEventListener("change", handleScreenChange);
 
 handleScreenChange(mediaQuery);
-// disableScroll();
-
-// function disableScroll() {
-//    scrollTop =
-//        window.scrollY|| document.documentElement.scrollTop;
-
-//  scrollLeft =
-//    window.scrollX || document.documentElement.scrollLeft;
-   
-   
-
-//  window.onscroll = function() {
-//   window.scrollTo(scrollLeft, scrollTop);
-//  };
-// }
 

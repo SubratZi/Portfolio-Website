@@ -9,7 +9,7 @@
 
 .slide-container{
     display: flex;
-    transition: transform 0.3s ease;
+    transition: transform 0.9s ease;
 }
 
 .image {
