@@ -140,6 +140,22 @@ function applyResponsiveBehavior() {
         return e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
     }
 
+    let intialposition = true;
+    function autoslide() {
+        if (isDragging === false){
+            if (intialposition){
+                slider.style.transform = `translateX(${-imageWidth}px)`;
+                intialposition = false;
+            }
+            else{
+                slider.style.transform = "translateX(0px)";
+                intialposition = true;
+            }
+            slider.style.transition = "transform 0.9s ease";
+        }
+    }
+    
+    setInterval(autoslide, 5000);
 }
 
 
@@ -150,14 +166,13 @@ function handleScreenChange(e) {
 
     if (e.matches) {
         applyResponsiveBehavior();
-    } else {
-      
-        console.log("Screen resolution is larger than 841px.");
-            
+        
     }
 }
 
 mediaQuery.addEventListener("change", handleScreenChange);
 
 handleScreenChange(mediaQuery);
+
+
 

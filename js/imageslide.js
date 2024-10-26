@@ -11,10 +11,6 @@ slider.addEventListener('mouseup', endDrag);
 slider.addEventListener('mouseleave', endDrag);
 slider.addEventListener('mousemove', drag);
 
-slider.addEventListener('touchstart', startDrag);
-slider.addEventListener('touchend', endDrag);
-slider.addEventListener('touchmove', drag);
-
 function startDrag(e) {
     isDragging = true;
     startPos = getPositionX(e);

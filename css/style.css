@@ -13,6 +13,8 @@ body{
     width: 100%;
     background-color: white;
     color: #323232;
+    margin: 0;
+    padding: 0; 
 }
 
 .nav-item{
@@ -71,9 +73,16 @@ body{
     margin:0 10px 0 10px;
 }
 
-
+.responsive-mode{
+    visibility: hidden;
+    display: flex;
+    position: absolute;
+    right: 30px;
+    top: 13.5px;
+}
 hr{
     opacity: .5;
+    width: 100vw;
 }
 
 .body-content{
@@ -96,7 +105,7 @@ hr{
     width: 20px;
     position: absolute;
     right: 20px;
-    top: 25px;
+    top: 25px;  
 }
 
 .fa-bars{
@@ -139,9 +148,14 @@ hr{
     }
 
     .nav-hamburger-bars{
-        visibility: hidden;
-        
+        visibility: hidden; 
     }
+
+    .responsive-mode{
+        visibility: visible;
+    }
+
+    
 
     .nav-left{ 
          display: none;
@@ -186,7 +200,6 @@ hr{
 
     .nav-hamburger-bars{
         visibility: hidden;
-        
     }
 
     .nav-left{ 
@@ -211,6 +224,9 @@ hr{
         visibility: hidden;
         
     }
+    
+
+
 
     .nav-left{ 
          display: none;
