@@ -46,4 +46,3 @@ function EndDrag() {
 function GetPositionX(e) {
     return e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
 }
-

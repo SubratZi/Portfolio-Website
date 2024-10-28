@@ -155,8 +155,6 @@ hr{
         visibility: visible;
     }
 
-    
-
     .nav-left{ 
          display: none;
     }
@@ -180,6 +178,10 @@ hr{
         
     }
 
+    .responsive-mode{
+        visibility: visible;
+    }
+
     .nav-left{ 
          display: none;
     }
@@ -189,7 +191,7 @@ hr{
     } 
 }
 
-@media only screen and (min-width: 412px) and (max-width: 500px){
+@media only screen and (min-width: 412px) and (max-width: 501px){
     body{
         width: 412px;
     }
@@ -200,6 +202,10 @@ hr{
 
     .nav-hamburger-bars{
         visibility: hidden;
+    }
+
+    .responsive-mode{
+        visibility: visible;
     }
 
     .nav-left{ 
@@ -222,12 +228,37 @@ hr{
 
     .nav-hamburger-bars{
         visibility: hidden;
-        
+    }
+
+    .responsive-mode{
+        visibility: visible;
     }
     
+    .nav-left{ 
+         display: none;
+    }
 
+    .nav-right{
+        display: none;
+    } 
+}
 
+@media only screen and (min-width: 841px) and (max-width: 1261px){
+    body{
+        width: 841px;
+    }
+    .nav-hamburger{
+        visibility: visible;
+    }
 
+    .nav-hamburger-bars{
+        visibility: hidden;
+    }
+
+    .responsive-mode{
+        visibility: visible;
+    }
+    
     .nav-left{ 
          display: none;
     }

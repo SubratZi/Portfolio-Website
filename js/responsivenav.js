@@ -1,46 +1,3 @@
-function touchbar(){
-    let bar = document.getElementsByClassName("nav-hamburger-bars")[0];
-    bar.style.visibility = "visible";
-}
-function barclose(){
-    let cancel = document.getElementsByClassName("nav-hamburger-bars")[0];
-    cancel.style.visibility = "hidden";
-}
-let initialchange = true
-
-function modechange(){
-    let mode = document.querySelector("body");
-    let intromode = document.querySelectorAll('.intro')
-    let navmode = document.querySelectorAll(".nav-item");
-    let amode = document.querySelectorAll('.nav-an')
-    if (initialchange){
-        mode.style.backgroundColor = "#121212";
-        navmode.forEach(item => {
-            item.style.backgroundColor = "#121212";
-        });
-        amode.forEach(item => {
-            item.style.color = "white";
-        });
-        intromode.forEach(item =>{
-            item.style.color = "white";
-        })
-        initialchange = false;
-    }else{
-        mode.style.backgroundColor = "white";
-        navmode.forEach(item => {
-            item.style.backgroundColor = "white";
-        });
-        amode.forEach(item => {
-            item.style.color = "black";
-        });
-        intromode.forEach(item =>{
-            item.style.color = "black";
-        })
-        initialchange = true;
-    }
-    
-}
-
 function applyResponsiveBehavior() {
 
     const slider = document.querySelector('.slide-container');
@@ -110,8 +67,7 @@ function applyResponsiveBehavior() {
     function StartDrag(e) {
         IsDragging = true;
         StartPos = GetPositionX(e);
-        textslider.style.cursor = "grab";
-        
+        textslider.style.cursor = "grab";   
     }
 
     function Drag(e) {
@@ -125,7 +81,6 @@ function applyResponsiveBehavior() {
             CurrentIndex -= 1;
         }
 
-
         textslider.style.transition = "transform 1s"
         textslider.style.transform = `translateX(${-CurrentIndex * textsWidth}px)`;
     }
@@ -133,46 +88,53 @@ function applyResponsiveBehavior() {
     function EndDrag() {
         IsDragging = false;
         textslider.style.cursor = "auto";
-        
     }
 
     function GetPositionX(e) {
         return e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
     }
 
-    let intialposition = true;
-    function autoslide() {
+    let intialpositionimage = true;
+    function autoslideimage() {
         if (isDragging === false){
-            if (intialposition){
+            if (intialpositionimage){
                 slider.style.transform = `translateX(${-imageWidth}px)`;
-                intialposition = false;
+                intialpositionimage = false;
             }
             else{
                 slider.style.transform = "translateX(0px)";
-                intialposition = true;
+                intialpositionimage = true;
             }
             slider.style.transition = "transform 0.9s ease";
         }
     }
-    
-    setInterval(autoslide, 5000);
+    setInterval(autoslideimage, 5000);
+
+    let intialpositiontext = true;
+    function autoslidetext() {
+        if (IsDragging === false){
+            if (intialpositiontext){
+                textslider.style.transform = `translateX(${-textsWidth}px)`;
+                intialpositiontext = false;
+            }
+            else{
+                textslider.style.transform = "translateX(0px)";
+                intialpositiontext = true;
+            }
+            textslider.style.transition = "transform 0.9s ease";
+        }
+    }
+    setInterval(autoslidetext, 5000);
 }
-
-
-let mediaQuery = window.matchMedia("(max-width: 841px)");
-
+let mediaQuery = window.matchMedia("(max-width: 1261px)");
 
 function handleScreenChange(e) {
 
     if (e.matches) {
         applyResponsiveBehavior();
-        
     }
 }
 
 mediaQuery.addEventListener("change", handleScreenChange);
 
 handleScreenChange(mediaQuery);
-
-
-

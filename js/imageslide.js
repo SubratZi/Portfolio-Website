@@ -11,6 +11,10 @@ slider.addEventListener('mouseup', endDrag);
 slider.addEventListener('mouseleave', endDrag);
 slider.addEventListener('mousemove', drag);
 
+slider.addEventListener('touchstart', startDrag);
+slider.addEventListener('touchend', endDrag);
+slider.addEventListener('touchmove', drag);
+
 function startDrag(e) {
     isDragging = true;
     startPos = getPositionX(e);
@@ -27,7 +31,6 @@ function drag(e) {
     } else if (diff > 0 && currentIndex > 0) {
         currentIndex -= 1;
     }
-
 
     slider.style.transition = "transform 1s"
     slider.style.transform = `translateX(${-currentIndex * imageWidth}px)`;
