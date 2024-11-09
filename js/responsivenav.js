@@ -138,3 +138,36 @@ function handleScreenChange(e) {
 mediaQuery.addEventListener("change", handleScreenChange);
 
 handleScreenChange(mediaQuery);
+
+
+let applyresponsivenesspc= () =>{
+    const textslider = document.querySelector('.intro-pg');
+    let Isdragging = false;
+    let Intialpositiontext = true;
+    function autoslideText() {
+        if (Isdragging === false){
+            if (Intialpositiontext){
+                textslider.style.transform = `translateX(${-555}px)`;
+                Intialpositiontext = false;
+            }
+            else{
+                textslider.style.transform = "translateX(0px)";
+                Intialpositiontext = true;
+            }
+            textslider.style.transition = "transform 0.9s ease";
+        }
+    }
+    setInterval(autoslideText, 5000);
+}
+
+let mediaquery = window.matchMedia("(min-width: 1261px)")
+
+let handlescreenchange= (e) =>{
+    if (e.matches){
+        applyresponsivenesspc();
+    }
+}
+
+mediaquery.addEventListener("change", handlescreenchange)
+
+handlescreenchange(mediaquery);
