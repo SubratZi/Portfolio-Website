@@ -6,15 +6,15 @@ function barclose(){
     let cancel = document.getElementsByClassName("nav-hamburger-bars")[0];
     cancel.style.visibility = "hidden";
 }
-let initialchange = true
+let mode = document.querySelector("body");
+let intromode = document.querySelectorAll('.intro')
+let navmode = document.querySelectorAll(".nav-item");
+let anmode = document.querySelectorAll('.nav-an')
+let icon = document.querySelectorAll(".icon")
 
 function modechange(){
-    let mode = document.querySelector("body");
-    let intromode = document.querySelectorAll('.intro')
-    let navmode = document.querySelectorAll(".nav-item");
-    let anmode = document.querySelectorAll('.nav-an')
-    let icon = document.querySelectorAll(".icon")
-    if (initialchange){
+    
+    if (mode.style.backgroundColor === "white" || !mode.style.backgroundColor){
         mode.style.backgroundColor = "#121212";
         navmode.forEach(item => {
             item.style.backgroundColor = "#121212";
@@ -28,7 +28,8 @@ function modechange(){
         icon.forEach(item=>{
             item.style.color = "white"
         })
-        initialchange = false;
+        localStorage.setItem("backgroundColor", "#121212");
+        localStorage.setItem("textColor", "white")
     }else{
         mode.style.backgroundColor = "white";
         navmode.forEach(item => {
@@ -44,5 +45,20 @@ function modechange(){
             item.style.color = "black"
         })
         initialchange = true;
+        localStorage.setItem("backgroundColor", "white");
+        localStorage.setItem("textColor", "black")
     }
 }
+
+window.addEventListener("load", () => {
+    // Retrieve the stored values
+    let savedBgColor = localStorage.getItem("backgroundColor") || "white";
+    let savedTextColor = localStorage.getItem("textColor") || "black";
+
+    // Apply the stored values
+    mode.style.backgroundColor = savedBgColor;
+    navmode.forEach(item => item.style.backgroundColor = savedBgColor);
+    anmode.forEach(item => item.style.color = savedTextColor);
+    intromode.forEach(item => item.style.color = savedTextColor);
+    icon.forEach(item => item.style.color = savedTextColor);
+});
