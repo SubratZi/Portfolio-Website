@@ -1,9 +1,9 @@
 function touchbar(){
-    let bar = document.getElementsByClassName("nav-hamburger-bars")[0];
+    let bar = document.getElementsByClassName("pages")[0];
     bar.style.visibility = "visible";
 }
 function barclose(){
-    let cancel = document.getElementsByClassName("nav-hamburger-bars")[0];
+    let cancel = document.getElementsByClassName("pages")[0];
     cancel.style.visibility = "hidden";
 }
 let mode = document.querySelector("body");
@@ -11,6 +11,7 @@ let intromode = document.querySelectorAll('.intro')
 let navmode = document.querySelectorAll(".nav-item");
 let anmode = document.querySelectorAll('.nav-an')
 let icon = document.querySelectorAll(".icon")
+let description =document.querySelectorAll(".description")
 
 function modechange(){
     
@@ -28,6 +29,9 @@ function modechange(){
         icon.forEach(item=>{
             item.style.color = "white"
         })
+        description.forEach(item=>{
+            item.style.color= "white"
+        })
         localStorage.setItem("backgroundColor", "#121212");
         localStorage.setItem("textColor", "white")
     }else{
@@ -44,7 +48,10 @@ function modechange(){
         icon.forEach(item=>{
             item.style.color = "black"
         })
-        initialchange = true;
+        description.forEach(item=>{
+            item.style.color= "black"
+            
+        })
         localStorage.setItem("backgroundColor", "white");
         localStorage.setItem("textColor", "black")
     }

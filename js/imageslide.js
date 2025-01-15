@@ -56,7 +56,7 @@ function autoslide() {
         else{
             slider.style.transform = "translateX(0px)";
             intialposition = true;
-        }
+        } 
         slider.style.transition = "transform 0.9s ease";
     }
 }
