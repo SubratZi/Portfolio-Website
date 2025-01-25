@@ -6,13 +6,16 @@
 body{
     max-width: 100%;
     overflow-x: hidden;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
+
 
 .navbar {
     height: 60px;
     width: 100%;
-    background-color: white;
-    color: #323232;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     margin: 0;
     padding: 0; 
 }
@@ -25,7 +28,7 @@ body{
 
 .nav-an {
     text-decoration: none;
-    color: black;
+    color: var(--text-color);
     font-family: "Playfair Display", Georgia, serif;
     /* font-family: "Karla", Arial, sans-serif; */
     font-size: 1.2rem;
@@ -67,6 +70,24 @@ body{
     display: flex;
     position: absolute;
     right: 15px;
+}
+
+:root,
+[data-theme = "light"]{
+    --bg-color: white;
+    --text-color: #121212;
+}
+
+[data-theme = "dark"]{
+    --bg-color: #121212;
+    --text-color: white;
+}
+
+@media(prefers-color-scheme:"dark"){
+    :root:not([data-theme = "light"]){
+        --bg-color: #121212;
+        --text-color: white;
+    }
 }
 
 .mode-an{
@@ -129,7 +150,7 @@ hr{
 
 .items{
     font-size: 19.5px;
-    color: black;
+    color: var(--text-color);
     margin-bottom:25px;
     padding-top:5px ;
     font-family: "Karla", Arial, sans-serif;
