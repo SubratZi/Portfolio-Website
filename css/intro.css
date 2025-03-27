@@ -46,6 +46,41 @@
     text-align: justify;
 }
 
+.content{
+    margin-top: 1.6rem;
+    margin-bottom: 3.2rem;
+}
+
+.content-list{
+    margin: 0 auto;
+    max-width: 120rem;
+    width: 100%;
+    padding-left: 9rem;
+    text-transform: uppercase;
+}
+
+.head{
+    font-size: 3rem;
+    line-height: 3.2rem;
+    color: var(--text-color);
+    letter-spacing: .0600em;
+    margin: 3.2rem 0 1.6rem 0.4rem;
+}
+
+
+.li-one ,li{
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    margin-left: 5rem;
+    margin-top: 2rem;
+}
+
+.li-one:hover{
+    text-decoration: underline red;
+}
+
 .intro{
     height: 65px;
     width: 555px;

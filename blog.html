@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subrat Baral</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/image.css">
+    <link rel="stylesheet" href="./css/intro.css">
+    <link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel = "icon"  href="./images/favicon.jpg" type="image/x-icon">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="nav-item navbar">
+            <div class="nav-left">
+                <div class="item-name">
+                    <a class="name-an nav-an" href="index.html">Subrat Baral</a> 
+                </div>
+            </div>
+            <div class="nav-right">
+                <div class="item-blog">
+                    <a class="blog-an nav-an" href="blog.html">Blog</a>
+                </div>
+
+                <div class="item-categories">
+                    <a class="categories-an nav-an" href="categories.html">Categories</a>
+                </div>
+
+                <div class="item-about">
+                    <a class="about-an nav-an" href="about.html">About</a>
+                </div>
+                <div class="light-mode">
+                    <i class="fa-solid fa-moon nav-an mode-an"></i>
+                </div>
+            </div>
+        </div>
+        
+        <div class="light-mode responsive-mode">
+            <i class="fa-solid fa-moon nav-an mode-an responsive-mode"></i>
+        </div>
+
+        <div class="nav-hamburger">
+            <div class="pages">
+                <div class="nav-hamburger-bars" ontouchstart = "barclose()">
+                    <i class="fa-solid fa-xmark cancel icon"></i>
+                </div>
+                <a href="./index.html" class="hamburger-home"><p class="items">Home</p></a>
+                <a href="./about.html" class="hamburger-about"><p class="items">About</p></a>
+                <a href="./categories.html" class="hamburger-categories"></a><p class="items">Categories</p></a>
+                <a href="./blog.html" class="hamburger-blog"></a><p class="items">Blog</p></a>
+            </div>
+            <div class="hamburger-icon" ontouchstart = "touchbar()">
+                <i class="fa-solid fa-bars icon"></i>
+            </div>
+            
+        </div>
+    </div>
+    <hr>
+    
+    <div class="content">
+        <section class="content-list">
+            <h1 class="head">Blogs</h1>
+            <ul>
+                <li><a href="#" class="li-one">Web Scrapping</a></li>
+            </ul>
+        </section>
+    </div>
+
+
+    <script src="./js/modes.js"></script>
+</body>
+</html>
