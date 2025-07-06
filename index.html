@@ -4,102 +4,202 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Subrat Baral</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/image.css">
-    <link rel="stylesheet" href="./css/intro.css">
-    <link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel = "icon"  href="./images/favicon.jpg" type="image/x-icon">
-
-
+    <link rel = "icon"  href="./favicon.jpg" type="image/x-icon">
 </head>
 <body>
-    <div class="navbar">
-        <div class="nav-item navbar">
-            <div class="nav-left">
-                <div class="item-name">
-                    <a class="name-an nav-an" href="index.html">Subrat Baral</a> 
-                </div>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">SSR</a>
             </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link">Skills</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a> -->
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
             <div class="nav-right">
-                <div class="item-blog">
-                    <a class="blog-an nav-an" href="blog.html">Blog</a>
-                </div>
-
-                <div class="item-categories">
-                    <a class="categories-an nav-an" href="categories.html">Categories</a>
-                </div>
-
-                <div class="item-about">
-                    <a class="about-an nav-an" href="about.html">About</a>
-                </div>
                 <div class="light-mode">
-                    <i class="fa-solid fa-moon nav-an mode-an"></i>
+                    <button id="themebutton"><i class="fa-solid fa-moon nav-an mode-an"></i></button>
                 </div>
-            </div>
-        </div>
-        
-        <div class="light-mode responsive-mode">
-            <i class="fa-solid fa-moon nav-an mode-an responsive-mode"></i>
-        </div>
-
-        <div class="nav-hamburger">
-            <div class="pages">
-                <div class="nav-hamburger-bars" ontouchstart = "barclose()">
-                    <i class="fa-solid fa-xmark cancel icon"></i>
+                <div class="responsive-mode">
+                    <button id="responsivebutton"><i class="fa-solid fa-moon nav-an mode-an"></i></button>
                 </div>
-                <a href="./index.html" class="hamburger-home"><p class="items">Home</p></a>
-                <a href="./about.html" class="hamburger-about"><p class="items">About</p></a>
-                <a href="./categories.html" class="hamburger-categories"></a><p class="items">Categories</p></a>
-                <a href="./blog.html" class="hamburger-blog"></a><p class="items">Blog</p></a>
-            </div>
-            <div class="hamburger-icon" ontouchstart = "touchbar()">
-                <i class="fa-solid fa-bars icon"></i>
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
             </div>
             
         </div>
-    </div>
-    <hr>
+    </nav>
 
-    <div class="body-content">
-        <div class="image-responsive">
-            <div class="slide-container">
-                <div class="image2"><img src="./images/pic-2.jpg" alt="Avatar" class="image"></div>
-                <div class="image1"><img src="./images/pic-1.jpg" alt="Avatar" class="image"></div>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Subrat Baral</h1>
+                <p class="hero-subtitle">Software Engineer & Researcher</p>
+                <p class="hero-description">
+                    Hello! I’m a passionate Python developer with expertise in web development, API creation, data analysis, and backend development. I thrive on working with data, building efficient APIs, and crafting clean, scalable code. With extensive experience in web scraping, I can transform raw data into valuable insights and enhance web functionalities.I am dedicated to delivering secure, reliable solutions and continuously strive to stay updated with the latest technologies. Let’s collaborate and create something exceptional together!  
+                </p>
+                <div class="hero-buttons">
+                    <!-- <a href="#projects" class="btn btn-primary">View Projects</a> -->
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="intro-responsive">
-        <div class="intro-pg">
-            <div class="intro-name intro-container">
-                <p class="intro-name-para intro">
-                    Subrat
-                </p>
-                <p class="inro-name-para intro">    
-                    Baral
-                </p> 
-            </div>
-            <div class="intro-about intro-container">
-                <p class="intro-about-para intro">
-                    I'm
-                </p>
-                <p class="intro-about-para intro">   
-                   <span class="Computer-Science">CS</span> Scholar 
-                </p>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I am a dedicated software engineer and researcher with a passion for solving complex 
+                        problems through innovative technology solutions. My work spans across full-stack 
+                        development, machine learning, and academic research.
+                    </p>
+                    <p>
+                        With a strong foundation in computer science, 
+                        I bridge the gap between theoretical knowledge and real-world applications. 
+                        I believe in the power of clean, maintainable code and evidence-based methodologies.
+                    </p>
+                    <p>
+                        Currently pursuing advanced research in computational methods while contributing 
+                        to open-source projects and developing scalable applications that make a difference.
+                    </p>
+                </div>
             </div>
         </div>
-        <div class="socialmedias">
-            <span class="github"><a href="https://github.com/SubratZi"><i class="fa-brands fa-github media icon"></i></a></span>
-            <span class="linkedin"><a href="https://www.linkedin.com/in/subratzi/"><i class="fa-brands fa-linkedin media icon"></i></a></i></span>
-            <span class="twitter"><a href="https://x.com/subratzi"><i class="fa-brands fa-x-twitter media icon"></i></a></i></span>
-        </div>
-    </div>
+    </section>
 
-    <script src="./js/imageslide.js"></script>
-    <script src="./js/textslider.js"></script>
-    <script src="./js/responsivenav.js"></script>
-    <script src="./js/modes.js"></script>
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">JavaScript</span>
+                        <span class="skill-item">Python</span>
+                        <span class="skill-item">C++</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Frameworks & Libraries</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">React</span>
+                        <span class="skill-item">Node.js</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Technologies</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">Git</span>
+                        <span class="skill-item">PostgreSQL</span>
+                        <span class="skill-item">MongoDB</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Research Areas</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">Machine Learning</span>
+                        <span class="skill-item">Algorithms</span>
+                        <span class="skill-item">Data Science</span>
+                        <span class="skill-item">Computer Vision</span>
+                        <span class="skill-item">Optimization</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <!-- <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Topic of Project</h3>
+                        <div class="project-links">
+                            <a href="#" class="project-link">GitHub</a>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">!language used!</span>
+                    </div>
+                </div>
+
+               
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p class="contact-description">
+                        I'm always interested in discussing new opportunities, research collaborations, 
+                        or innovative projects. Feel free to reach out if you'd like to connect. You’ll also find all the ways to get in touch with me 
+                        below — whether it's a quick message, a professional inquiry, or just to say hi.
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <strong>Email:</strong>
+                            <a href="mailto:parsurambaral42@gmail.com">parsurambaral42@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <strong>LinkedIn:</strong>
+                            <a href="https://linkedin.com/in/subratzi" target="_blank">linkedin.com/in/subratzi</a>
+                        </div>
+                        <div class="contact-item">
+                            <strong>GitHub:</strong>
+                            <a href="https://github.com/subratzi" target="_blank">github.com/subratzi</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Subrat Baral. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
